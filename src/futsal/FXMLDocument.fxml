@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="595.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="futsal.FXMLDocumentController">
+    <children>
+      <ImageView fitHeight="300.0" fitWidth="461.0" layoutX="329.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../gambar/background-putih.png" />
+         </image>
+      </ImageView>
+      <Pane layoutY="-9.0" prefHeight="604.0" prefWidth="532.0" style="-fx-background-color: #2eb8b8;">
+         <children>
+            <Label layoutX="154.0" layoutY="27.0" prefHeight="44.0" prefWidth="237.0" text="SEWA FUTSAL YUK" textAlignment="CENTER">
+               <font>
+                  <Font name="Forte" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="104.0" prefHeight="27.0" prefWidth="107.0" text="Nama Pemesan">
+               <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nama" layoutX="224.0" layoutY="105.0" prefHeight="25.0" prefWidth="227.0" />
+            <Label layoutX="51.0" layoutY="158.0" prefHeight="27.0" prefWidth="128.0" text="No. Handphone">
+               <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="hp" layoutX="224.0" layoutY="159.0" prefHeight="25.0" prefWidth="227.0" />
+            <Label layoutX="51.0" layoutY="212.0" prefHeight="27.0" prefWidth="128.0" text="Kode Booking">
+               <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="kode" layoutX="224.0" layoutY="213.0" prefHeight="25.0" prefWidth="227.0" />
+            <DatePicker fx:id="tgl" layoutX="223.0" layoutY="267.0" prefHeight="25.0" prefWidth="227.0" />
+            <Label layoutX="48.0" layoutY="266.0" prefHeight="27.0" prefWidth="155.0" text="Tanggal Pemesanan">
+               <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="311.0" prefHeight="27.0" prefWidth="155.0" text="Jangka Waktu">
+               <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="288.0" layoutY="311.0" prefHeight="27.0" prefWidth="49.0" text="Jam">
+               <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="342.0" layoutY="311.0" prefHeight="27.0" prefWidth="59.0" text="Tarif">
+               <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="pesan" layoutX="43.0" layoutY="362.0" mnemonicParsing="false" onAction="#pesan" prefHeight="27.0" prefWidth="128.0" style="-fx-background-color: black;" text="PESAN" textFill="#2eb8b8">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="detail" layoutX="202.0" layoutY="362.0" mnemonicParsing="false" onAction="#detail" prefHeight="27.0" prefWidth="128.0" style="-fx-background-color: black;" text="DETAIL" textFill="#2eb8b8">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font></Button>
+            <TextField fx:id="mulai" layoutX="224.0" layoutY="312.0" prefHeight="25.0" prefWidth="59.0" />
+            <TextField fx:id="sampai" layoutX="391.0" layoutY="312.0" prefHeight="25.0" prefWidth="59.0" />
+            <TableView fx:id="TabelY" layoutX="11.0" layoutY="402.0" prefHeight="146.0" prefWidth="482.0">
+              <columns>
+                <TableColumn fx:id="IdFutsal" prefWidth="32.0" text="ID_Futsal" />
+                <TableColumn fx:id="namaFutsal" prefWidth="97.0" text="Nama Penyewa" />
+                  <TableColumn fx:id="hpFutsal" prefWidth="109.0" text="No. HP" />
+                  <TableColumn fx:id="kodeFutsal" prefWidth="52.0" text="Kode Book" />
+                  <TableColumn fx:id="mulaiFutsal" prefWidth="49.0" text="Jam" />
+                  <TableColumn fx:id="selesaiFutsal" prefWidth="49.0" text="Tarif" />
+                  <TableColumn fx:id="tglFutsal" prefWidth="93.0" text="Tanggal" />
+              </columns>
+            </TableView>
+            <Button fx:id="reset" layoutX="357.0" layoutY="362.0" mnemonicParsing="false" onAction="#reset" prefHeight="27.0" prefWidth="128.0" style="-fx-background-color: black;" text="RESET" textFill="#2eb8b8">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="logout" layoutX="386.0" layoutY="564.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="107.0" style="-fx-background-color: black;" text="LOG OUT" textFill="#2eb8b8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
